@@ -1,0 +1,112 @@
+<div class="p-grid ui-fluid container">
+    <div class="p-col-12 p-sm-12 p-md-12 p-lg-12">
+        <div class="card card-w-title">
+            <h1 class="cor-green animate__animated animate__backInUp">
+                <i>Digistarts</i>
+            </h1>
+
+            <h3>
+                <b class="cor-blue">Candidato: </b>Wellington Hayner Santos Sousa
+            </h3>
+            <hr class="animate__animated animate__backInRight">
+
+            <br>
+
+            <form novalidate autocomplete="off" (ngSubmit)="salvar()" [formGroup]="formulario">
+                <div class="ui-g">
+
+                    <div class="ui-g-12 ui-fluid">
+                        <h1 class="cor-green animate__animated animate__backInUp">
+                            <i>Problema do conjunto e
+                                seus elementos únicos</i>
+                        </h1>
+                    </div>
+
+
+                    <!--INPUT-NUMBER-->
+                    <div class="ui-g-4 ui-fluid">
+                        <p-inputNumber placeholder="Digite valores entre 1 e 1.000" formControlName="inputUser">
+                        </p-inputNumber>
+
+                        <app-mensagem [control]="formulario.get('inputUser')" error="required"
+                            text="Informe o número desejado">
+                        </app-mensagem>
+
+                        <app-mensagem [control]="formulario.get('inputUser')" error="min" text="Informe nº positivo">
+                        </app-mensagem>
+
+                        <app-mensagem [control]="formulario.get('inputUser')" error="max" text="Valor máximo 1.000">
+                        </app-mensagem>
+                    </div>
+                    <!--INPUT-NUMBER-->
+
+                    <!--SALVAR-->
+                    <div class="ui-g-4 ui-fluid">
+                        <button class="ui-button-success" pButton type="submit" label="Salvar" icon="fa fa-check"
+                            pTooltip="Salvar" tooltipPosition="top" [disabled]="formulario.invalid"></button>
+                    </div>
+                    <!--SALVAR-->
+
+                    <!--SALVAR-->
+                    <div class="ui-g-4 ui-fluid">
+                        <button (click)="limpar()" class="ui-button-primary" pButton type="submit" label="Limpar"
+                            icon="fa fa-eraser" pTooltip="Limpar" tooltipPosition="top"></button>
+                    </div>
+                    <!--SALVAR-->
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <!--ENTRADA-->
+                    <div class="ui-g-6 ui-fluid">
+                        <b>
+                            <h1 class="cor-blue centralizar-texto">ENTRADA</h1>
+                        </b>
+                        <p-table styleClass="animated fadeIn" autoLayout="true" [value]="dados" selectionMode="single"
+                            [responsive]="true" emptyMessage="Nenhum registro localizado">
+
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th> Conjunto de Dados </th>
+                                </tr>
+                            </ng-template>
+
+                            <ng-template pTemplate="body" let-dado>
+                                <tr>
+                                    <td class="centralizar-texto"> {{ dado.inputUser }} </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                    <!--ENTRADA-->
+
+
+                    <!--SAÍDA-->
+                    <div class="ui-g-6 ui-fluid">
+                        <b>
+                            <h1 class="cor-red centralizar-texto">SAÍDA</h1>
+                        </b>
+                        <p-table styleClass="animated fadeIn" autoLayout="true" [value]="dadosDistintos"
+                            selectionMode="single" [responsive]="true" emptyMessage="Nenhum registro localizado">
+
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th class="cor-red"> Dados Distintos </th>
+                                </tr>
+                            </ng-template>
+
+                            <ng-template pTemplate="body" let-dado>
+                                <tr>
+                                    <td class="centralizar-texto"> {{ dado.inputUser }} </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                    <!--SAÍDA-->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

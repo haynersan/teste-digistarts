@@ -1,0 +1,64 @@
+.container {
+    margin-top: 20px;;
+    margin-left: 20px;;
+    margin-right: 20px;;
+    margin-bottom: 20px;;
+}
+
+
+.text-color {
+    color: #0072b1;
+    font-size: 20px;
+  }
+  
+  .mudanca {
+    color: green;
+    font-size: 20px;
+  }
+  
+  .fonte {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5;
+  }
+  
+  
+  .processos {
+    color:#dd4b39;
+    font-size: 20px;
+   }
+  
+  
+   .pessoas {
+    color: #6441a5;
+    font-size: 20px;
+  }
+  
+  .tecnologia {
+    color:  #7ab800;
+    font-size: 20px;
+  }
+  
+
+  .cor-red {
+    color:#dd4b39;
+}
+
+.cor-orange {
+  color:  #f57d00;
+}
+
+.cor-blue {
+  color: #0072b1;
+}
+
+.cor-green {
+  color: green;
+}
+
+
+.centralizar-texto {
+  text-align: center;
+}
