@@ -1,9 +1,6 @@
-// Angular
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-
 
 @Component({
   selector: 'app-form-test-one',
@@ -13,9 +10,8 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 export class FormTestOneComponent implements OnInit {
 
 
-  public dados: any[] = [];
-  public dadosDistintos: any[] = [];
-
+  public dados = [];
+  public dadosDistintos = [];
   public formulario: FormGroup;
 
 
@@ -30,8 +26,6 @@ export class FormTestOneComponent implements OnInit {
     this.title.setTitle('RH Digistarts');
 
     this.configurarFormulario();
-
-    console.log(this.dados);
 
   }
 
@@ -52,7 +46,6 @@ export class FormTestOneComponent implements OnInit {
 
     this.formulario.reset();
 
-
     this.atualizaConjuntoDadosDistintos();
 
   }
@@ -68,21 +61,8 @@ export class FormTestOneComponent implements OnInit {
 
   limpar() {
 
-
-    // this.dados = this.dados.length[0];
-    // console.log(this.dados.length);
     this.dados = [];
     this.dadosDistintos = [];
-
-    /*
-    while (this.dados.length) {
-      this.dados = [] = [];
-    }*/
-
-    console.log(this.dados);
-
-
-
 
   }
 }
